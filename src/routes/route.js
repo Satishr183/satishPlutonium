@@ -1,5 +1,6 @@
 const express = require('express');
 const abc = require('../introduction/intro')
+const printL = require('../logger/logger')
 const router = express.Router();
 
 router.get('/test-me', function (req, res) {
@@ -11,6 +12,11 @@ router.get('/test-me', function (req, res) {
 
 router.get('/test-you', function(req, res){
     res.send('This is the second routes implementation')
+})
+
+router.get('/assign', function(req,res){
+    res.send('All my assignment completed')
+    printL.printLetters()
 })
 
 router.get('/give-me-students-data',function(req, res){
