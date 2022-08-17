@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
 //Mongoose helps to make connection between mongoDb and Nodejs
-mongoose.connect("mongodb+srv://Satishr183:6SdvyY7phCfH5VsV@cluster0.ewmx8.mongodb.net/book-DB",{
+mongoose.connect("mongodb+srv://Satishr183:6SdvyY7phCfH5VsV@cluster0.ewmx8.mongodb.net/AuthorBook-DB",{
     useNewUrlParser: true
 })
 .then( ()=> console.log("MognoDB Connected..."))
