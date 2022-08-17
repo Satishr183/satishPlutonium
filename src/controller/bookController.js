@@ -36,8 +36,9 @@ const getParticularBooks = async function(req, res){
 
 //give list of books whose price is matched with 100inr,200inr and 500inr
 const getXINRBooks = async function(req, res){
+    
 
-    let inrBooks = await bookModel.find({$or:[{price:{$eq:/^100INR/}},{price:{$eq:/^200INR/}},{price:{$eq:/^500INR/}}]})
+    let inrBooks = await bookModel.find({"prices.indianPrice": {$in: ["100INR", "200INR","500 INR"]}} )
 
     res.send({msg:inrBooks})
 }
