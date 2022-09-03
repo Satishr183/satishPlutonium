@@ -90,7 +90,7 @@ let getAllVaccine = async function(req, res){
 
     let options={
         method:"get",
-        url:`https://cdn-api.co-vin.in/api/v4/appointment/sessions/findByDistrict?district_id=${districtId}&date=${date}`
+        url:`https://cdn-api.co-vin.in/api/v2/appointment/sessions/findByDistrict?district_id=${districtId}&date=${date}`
     }
     let output = await axios(options)
     console.log(output.data);
